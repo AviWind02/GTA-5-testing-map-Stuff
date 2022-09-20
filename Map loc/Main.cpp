@@ -204,6 +204,22 @@ void renderMenu()
         ImGui::BulletText(("Pin Y: " + std::to_string(pinLoc.y)).c_str());
         ImGui::BulletText(("Old Pin X: " + std::to_string(pinLocOld.x)).c_str());
         ImGui::BulletText(("Old Pin Y: " + std::to_string(pinLocOld.y)).c_str());
+        ImGui::BulletText(("From X Edge: " + std::to_string((pinLoc.x * (mapCenter.x) / gameMap.x))).c_str());
+        ImGui::BulletText(("From Y Edge: " + std::to_string((pinLoc.y * (mapCenter.y) / gameMap.y))).c_str());
+        ImGui::BulletText(("From X Center: " + std::to_string(pinLoc.x - mapCenter.x)).c_str());
+        ImGui::BulletText(("From Y Center: " + std::to_string(pinLoc.y - mapCenter.y)).c_str());
+        ImGui::Separator();
+        ImGui::BulletText(("Map center X: " + std::to_string(mapCenter.x)).c_str());
+        ImGui::BulletText(("Map center Y: " + std::to_string(mapCenter.y)).c_str());
+        ImGui::BulletText(("Game Map X: " + std::to_string(gameMap.x)).c_str());
+        ImGui::BulletText(("Game Map Y: " + std::to_string(gameMap.y)).c_str());
+        ImGui::BulletText(("Game Coords Start X: " + std::to_string(PinCoordsStart.x)).c_str());
+        ImGui::BulletText(("Game Coords Start Y: " + std::to_string(PinCoordsStart.y)).c_str());
+        ImGui::Separator();
+        ImGui::BulletText(("Map center to game map X: " + std::to_string(mapCenter.x / gameMap.x)).c_str());
+        ImGui::BulletText(("Map center to game map Y: " + std::to_string(mapCenter.y / gameMap.y)).c_str());
+
+
     }
     ImGui::End();
 
